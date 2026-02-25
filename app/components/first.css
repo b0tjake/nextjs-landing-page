@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+HU:wght@100..400&display=swap');
+
+.logo{
+    font-family: 'Playwrite HU', sans-serif;
+
+}
+.firstSection{
+    background-image: url("/qu.png");
+    background-size: cover;
+    /* padding-top: 5000px; */
+    background-position: center;
+}
