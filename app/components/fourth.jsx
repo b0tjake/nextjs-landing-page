@@ -11,16 +11,16 @@ export default function Fourth(){
     return(
         <motion.div 
             ref={ref}
-            className="min-h-screen p-5 flex w-full relative"
+            className="min-h-screen p-4 sm:p-5 md:p-6 lg:p-8 flex flex-col lg:flex-row w-full relative gap-6 lg:gap-0"
             style={{ zIndex: 10 }}
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.8 }}
         >
-            <div className="w-2/3 p-5">
+            <div className="w-full lg:w-2/3 p-3 sm:p-5">
                 {/* Header text with slide up animation */}
                 <motion.p 
-                    className="text-gray-500 text-xl"
+                    className="text-gray-500 text-lg sm:text-xl md:text-2xl"
                     initial={{ y: 50, opacity: 0 }}
                     animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
@@ -29,8 +29,9 @@ export default function Fourth(){
                 </motion.p>
                 
                 {/* Services list with staggered animation */}
-                <div className="flex flex-col justify-center gap-19 pt-16 text-6xl items-center mt-6">
+                <div className="flex flex-col justify-center gap-8 sm:gap-12 md:gap-16 lg:gap-19 pt-8 sm:pt-12 md:pt-16 text-3xl sm:text-4xl md:text-5xl lg:text-6xl items-center mt-4 sm:mt-6">
                     <motion.h1
+                        className="text-center sm:text-left"
                         initial={{ x: -100, opacity: 0 }}
                         animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
@@ -45,7 +46,7 @@ export default function Fourth(){
                     </motion.h1>
                     
                     <motion.h1 
-                        className="text-gray-400 font-light"
+                        className="text-gray-400 font-light text-center sm:text-left"
                         initial={{ x: 100, opacity: 0 }}
                         animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
@@ -60,7 +61,7 @@ export default function Fourth(){
                     </motion.h1>
                     
                     <motion.h1 
-                        className="text-gray-400 font-light"
+                        className="text-gray-400 font-light text-center sm:text-left"
                         initial={{ x: -100, opacity: 0 }}
                         animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
@@ -75,7 +76,7 @@ export default function Fourth(){
                     </motion.h1>
                     
                     <motion.h1 
-                        className="text-gray-400 font-light"
+                        className="text-gray-400 font-light text-center sm:text-left"
                         initial={{ x: 100, opacity: 0 }}
                         animate={isInView ? { x: 0, opacity: 1 } : { x: 100, opacity: 0 }}
                         transition={{ duration: 0.8, delay: 1.0 }}
@@ -91,10 +92,10 @@ export default function Fourth(){
                 </div>
                 
                 {/* Bottom section with images and text */}
-                <div className="w-full flex items-end gap-5 justify-around mt-20">
+                <div className="w-full flex flex-col sm:flex-row items-center sm:items-end gap-4 sm:gap-5 justify-around mt-12 sm:mt-16 md:mt-20">
                     <motion.img 
                         src="/agricultFourth.jfif" 
-                        className="w-90 h-50 rounded-2xl" 
+                        className="w-full sm:w-80 md:w-90 h-48 sm:h-50 rounded-2xl object-cover" 
                         alt="Description"
                         initial={{ y: 100, opacity: 0, scale: 0.8 }}
                         animate={isInView ? { y: 0, opacity: 1, scale: 1 } : { y: 100, opacity: 0, scale: 0.8 }}
@@ -102,14 +103,14 @@ export default function Fourth(){
                     />
                     <motion.img 
                         src="/fourthimg.jfif" 
-                        className="w-90 h-50 rounded-2xl" 
+                        className="w-full sm:w-80 md:w-90 h-48 sm:h-50 rounded-2xl object-cover" 
                         alt="Description"
                         initial={{ y: 100, opacity: 0, scale: 0.8 }}
                         animate={isInView ? { y: 0, opacity: 1, scale: 1 } : { y: 100, opacity: 0, scale: 0.8 }}
                         transition={{ duration: 1, delay: 1.6, type: "spring", stiffness: 100 }}
                     />
                     <motion.p 
-                        className="text-gray-600 pb-2"
+                        className="text-gray-600 pb-2 text-sm sm:text-base md:text-lg text-center sm:text-left max-w-xs"
                         initial={{ y: 50, opacity: 0 }}
                         animate={isInView ? { y: 0, opacity: 1 } : { y: 50, opacity: 0 }}
                         transition={{ duration: 0.8, delay: 1.8 }}
@@ -120,10 +121,10 @@ export default function Fourth(){
             </div>
             
             {/* Right side image */}
-            <div className="w-1/3">
+            <div className="w-full lg:w-1/3">
                 <motion.img 
                     src="/fourthTwila.jfif" 
-                    className="w-full h-fit mt-4 rounded-sm" 
+                    className="w-full h-64 sm:h-80 lg:h-fit mt-4 rounded-sm object-cover" 
                     alt="Description"
                     initial={{ x: 100, opacity: 0, rotate: 5 }}
                     animate={isInView ? { x: 0, opacity: 1, rotate: 0 } : { x: 100, opacity: 0, rotate: 5 }}

@@ -16,10 +16,10 @@ export default function Fifth() {
             animate={isInView ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 1 }}
         >
-            <div className="text-gray-200 flex gap-10 justify-around p-15">
+            <div className="text-gray-200 flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 justify-around p-6 sm:p-10 md:p-15">
                 {/* Left side - Main heading */}
                 <motion.p 
-                    className="text-5xl font-mono w-1/2"
+                    className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-mono w-full lg:w-1/2"
                     initial={{ x: -100, opacity: 0 }}
                     animate={isInView ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
                     transition={{ duration: 1.2, delay: 0.3, type: "spring", stiffness: 80 }}
@@ -34,10 +34,10 @@ export default function Fifth() {
                 </motion.p>
                 
                 {/* Right side - Services section */}
-                <div className="flex flex-col items-end gap-4 w-1/2">
+                <div className="flex flex-col items-start lg:items-end gap-3 sm:gap-4 w-full lg:w-1/2">
                     {/* Agricultural Innovations title */}
                     <motion.p 
-                        className="text-4xl font-mono"
+                        className="text-2xl sm:text-3xl md:text-4xl font-mono"
                         initial={{ x: 100, opacity: 0, y: -30 }}
                         animate={isInView ? { x: 0, opacity: 1, y: 0 } : { x: 100, opacity: 0, y: -30 }}
                         transition={{ duration: 1, delay: 0.8, type: "spring", stiffness: 100 }}
@@ -53,7 +53,7 @@ export default function Fifth() {
                     
                     {/* Service items with staggered animation */}
                     <motion.p 
-                        className="text-gray-200 text-2xl font-mono"
+                        className="text-gray-200 text-lg sm:text-xl md:text-2xl font-mono"
                         initial={{ x: 50, opacity: 0 }}
                         animate={isInView ? { x: 0, opacity: 1 } : { x: 50, opacity: 0 }}
                         transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
@@ -62,7 +62,7 @@ export default function Fifth() {
                     </motion.p>
                     
                     <motion.p 
-                        className="text-gray-200 text-2xl font-mono"
+                        className="text-gray-200 text-lg sm:text-xl md:text-2xl font-mono"
                         initial={{ x: 50, opacity: 0 }}
                         animate={isInView ? { x: 0, opacity: 1 } : { x: 50, opacity: 0 }}
                         transition={{ duration: 0.8, delay: 1.4, ease: "easeOut" }}
@@ -71,7 +71,7 @@ export default function Fifth() {
                     </motion.p>
                     
                     <motion.p 
-                        className="text-gray-200 text-2xl font-mono"
+                        className="text-gray-200 text-lg sm:text-xl md:text-2xl font-mono"
                         initial={{ x: 50, opacity: 0 }}
                         animate={isInView ? { x: 0, opacity: 1 } : { x: 50, opacity: 0 }}
                         transition={{ duration: 0.8, delay: 1.6, ease: "easeOut" }}
